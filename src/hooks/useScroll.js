@@ -7,7 +7,7 @@ function useScroll(callback) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   function handleScroll() {
-    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
+    if (Math.abs(+window.innerHeight + +document.documentElement.scrollTop - +document.documentElement.offsetHeight) > 100) return;
     setIsFetching(true);
   }
   useEffect(() => {
