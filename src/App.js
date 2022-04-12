@@ -14,7 +14,6 @@ function App() {
   const inputs = [1, 2, 3, 4, 5, 6, 7];
   return (
     <ThemeProvider theme={main}>
-      <NewRow inputs={inputs} />)
       <div className="App">
         <NavBar />
         <Header setFileData={setFileData} setFileName={setFileName}></Header>
